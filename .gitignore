@@ -1,0 +1,6 @@
+env/
+jarvis.conf
+logs.txt
+*#*/
+.vscode/
+todo

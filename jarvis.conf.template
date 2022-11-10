@@ -1,0 +1,11 @@
+# copy this template to jarvis.conf and fill in the required information
+[DISCORD BOT]
+token = put your bot token here
+id = put your bot id here
+# the permissions can be calculated here https://discordapi.com/permissions.html
+# currently the bot needs the read/write message and embed permissions
+permissions = the bots permissions
+# space separated list of prefix for the bot
+prefix = j. J.
+# space separated list of filetypes to save
+mediatype = png jpeg gif jpg mp4 mov

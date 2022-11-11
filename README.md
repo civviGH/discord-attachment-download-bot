@@ -32,8 +32,9 @@ Invite your Application/Bot to any server you want.
 ## Systemd
 
 If you want the bot to run as a systemd service file, use the repo example in `systemd`, copy it to `/etc/systemd/system` on your system and change the path in the service file to the correct one.
-Then you can reload the systemd unit files `systemctl daemon-reload` and start/enable the bot:
+Then you can reload the systemd unit files and start/enable the bot:
 ```
+systemctl daemon-reload
 systemctl enable discord-download-bot.service
 systemctl start discord-download-bot.service
 ```

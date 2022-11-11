@@ -1,0 +1,14 @@
+[Unit]
+Description=Jarvis bot to download attachments in the operator discord server
+Documentation=https://github.com/civviGH/discord-attachment-download-bot
+# https://unix.stackexchange.com/questions/404667/systemd-service-what-is-multi-user-target
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+WorkingDirectory=/home/git/jarvis
+ExecStart=/home/git/jarvis/env/bin/python jarvis.py
+
+[Install]
+WantedBy=multi-user.target

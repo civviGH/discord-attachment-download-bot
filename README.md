@@ -38,3 +38,21 @@ systemctl daemon-reload
 systemctl enable discord-download-bot.service
 systemctl start discord-download-bot.service
 ```
+
+### as non-root
+
+If you want the service to run as non-root, create a system user:
+```
+useradd -r -s /bin/false discordbot
+```
+and add these lines in the service file under the `[Service]` tag:
+```
+User=discordbot
+Group=discordbot
+```
+as well as giving the newly created user ownership of the working directory:
+```
+chown -R discordbot: /path/to/working/directory
+```
+
+Then reload the systemd and restart the service.
